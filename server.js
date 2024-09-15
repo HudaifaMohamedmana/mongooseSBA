@@ -14,7 +14,7 @@ app.get('/',(req, res) => {
 });
 
 app.use('/Pirates',PiratesRoutes)
-app.use('/Navy',NavyRoutesRoutes)
+app.use('/Navy',NavyRoutes)
 
 
 //----------------------------server ---------------------------

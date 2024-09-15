@@ -14,11 +14,10 @@ const getNavyById = async (req, res) => {
 };
 // +++++++++++++ {CREATE} ++++++++++++++  
 const createNavy = async (req, res) => {
-    const {name,crew,bounty,devilFruitType} = req.body;
+    const {name,title,devilFruitType} = req.body;
     const navy = await Navy.create({
       name: name,
-      crew: crew,
-      bounty: bounty,
+      title: title,
       devilFruitType: devilFruitType,
     });
     res.json({navy});
@@ -29,8 +28,7 @@ const updateNavy = async (req, res) => {
     const {name,crew,bounty,devilFruitType} = req.body;
     const Navy = await Navy.findByIdAndUpdate(NavyId, {
         name: name,
-        crew: crew,
-        bounty: bounty,
+        title: title,
         devilFruitType: devilFruitType,
     });
     const updatedNavy = await Navy.findById(NavyId);
