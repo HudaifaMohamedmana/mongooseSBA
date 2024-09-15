@@ -4,10 +4,16 @@ require("dotenv").config();
 const Pirates = require('./models/PiratesM')
 const PiratesRoutes = require('./routes/PiratesR');
 const NavyRoutes = require('./routes/NavyR');
+const ShichibukaiRoutes = require('./routes/shichibukaiR');
 
 
 const port = process.env.PORT || 3000;
 //----------------------------imports --------------------------
+app.use((req, res, next) => {
+    console.log(`A request happened: ${req.method} ${req.url}`);
+    next();
+  });
+
 app.use(express.json());
 app.get('/',(req, res) => {
     res.send(" hello: world");
@@ -15,6 +21,8 @@ app.get('/',(req, res) => {
 
 app.use('/Pirates',PiratesRoutes)
 app.use('/Navy',NavyRoutes)
+app.use('/Shichibukai',ShichibukaiRoutes)
+
 
 
 //----------------------------server ---------------------------

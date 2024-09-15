@@ -11,13 +11,13 @@ const shichibukaiSchema = new mongoose.Schema({
 })
 /*
 {
-"name":"Doflamingo)",
+"name":"Doflamingo",
 "crew":"Donquixote Pirates",
 "bounty":340 000 000,
 "devilFruitType":"Ito Ito no Mi",
 }
 */
 
-const shichibukai = mongoose.model('shichibukai', shichibukaiSchema);
+const Shichibukai = mongoose.model('shichibukai', shichibukaiSchema);
 
-module.exports = shichibukai;
+module.exports = Shichibukai;
