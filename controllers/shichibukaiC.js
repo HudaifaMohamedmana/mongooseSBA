@@ -39,7 +39,7 @@ const updateCharecter = async (req, res) => {
   // // +++++++++++++ {DELETE} ++++++++++++++
 const deleteCharecter = async (req, res) => {
     const shichibukaiId = req.params.id;
-    await Shichibukai.deleteOne({id: shichibukaiId,});
+    await Shichibukai.deleteOne({_id: shichibukaiId});
     res.json({success:"Record Deleted Successfully"} );
 };
 

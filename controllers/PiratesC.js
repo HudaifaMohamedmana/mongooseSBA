@@ -39,7 +39,7 @@ const updateCharecter = async (req, res) => {
   // // +++++++++++++ {DELETE} ++++++++++++++
 const deleteCharecter = async (req, res) => {
     const pirateId = req.params.id;
-    await Pirates.deleteOne({id: pirateId});
+    await Pirates.deleteOne({_id: pirateId});
     res.json({success:"Record Deleted Successfully"} );
 };
 

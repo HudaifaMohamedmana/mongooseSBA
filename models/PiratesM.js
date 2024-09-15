@@ -15,8 +15,8 @@ const PiratesSchema = new mongoose.Schema({
 {
 "name":"Luffy",
 "crew":"straw hats",
-"bounty":3 000 000 000,
-"devilFruitType":"Nika ",
+"bounty":3000000000,
+"devilFruitType":"Nika "
 }
 */
 

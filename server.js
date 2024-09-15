@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 require("dotenv").config();
-const Pirates = require('./models/PiratesM')
 const PiratesRoutes = require('./routes/PiratesR');
 const NavyRoutes = require('./routes/NavyR');
 const ShichibukaiRoutes = require('./routes/shichibukaiR');

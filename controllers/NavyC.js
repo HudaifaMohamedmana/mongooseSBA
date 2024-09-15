@@ -37,7 +37,7 @@ const updateNavy = async (req, res) => {
   // // +++++++++++++ {DELETE} ++++++++++++++
 const deleteNavy = async (req, res) => {
     const NavyId = req.params.id;
-    await Navy.deleteOne({id: NavyId,});
+    await Navy.deleteOne({_id: NavyId});
     res.json({success:"Record Deleted Successfully"} );
 };
 
