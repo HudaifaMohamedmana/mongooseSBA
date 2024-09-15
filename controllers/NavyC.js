@@ -25,8 +25,8 @@ const createNavy = async (req, res) => {
   // // +++++++++++++ {UPDATE} ++++++++++++++
 const updateNavy = async (req, res) => {
     const NavyId = req.params.id
-    const {name,crew,bounty,devilFruitType} = req.body;
-    const Navy = await Navy.findByIdAndUpdate(NavyId, {
+    const {name,title,devilFruitType} = req.body;
+    const navy = await Navy.findByIdAndUpdate(NavyId, {
         name: name,
         title: title,
         devilFruitType: devilFruitType,
