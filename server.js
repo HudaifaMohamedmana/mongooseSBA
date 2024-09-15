@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
 require("dotenv").config();
-const OnePiece = require('./models/one_piceM')
-const onePieceRoutes = require('./routes/one_piceR'); // Correctly importing the router
+const Pirates = require('./models/PiratesM')
+const PiratesRoutes = require('./routes/PiratesR');
+const NavyRoutes = require('./routes/NavyR');
+
 
 const port = process.env.PORT || 3000;
 //----------------------------imports --------------------------
@@ -11,7 +13,9 @@ app.get('/',(req, res) => {
     res.send(" hello: world");
 });
 
-app.use('/OnePiece',onePieceRoutes)
+app.use('/Pirates',PiratesRoutes)
+app.use('/Navy',NavyRoutesRoutes)
+
 
 //----------------------------server ---------------------------
 app.listen(port,()=>{
