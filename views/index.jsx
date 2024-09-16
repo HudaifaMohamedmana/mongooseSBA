@@ -1,20 +1,24 @@
-import React from 'react'
-let data = ["hudaifa","bryan","shaq"]
-function index() {
-    const name = "hudaifa"
-  return (
-    <>
-    <div style={{border:"solid",textAlign:"center"}}> yoyoyo</div>
-    {data.map((student)=>{
-        return(
-            <div style={{border:"solid red",textAlign:"center",margin:"1em"}}>{student}</div> 
-        )
-    })}
-    <p> wolcome {name} </p>
-    <img src="https://wallpapers.com/images/featured/super-cool-pictures-h943jt67w6kqn4e6.jpg" alt="" />
+import React from 'react';
 
-    </>
-  )
+function Index({ pirates }) {
+    return (
+        <>
+            {pirates && pirates.length > 0 ? (
+                pirates.map((pirate, index) => (
+                    <div key={index} style={{ borderRadius: " 25px", textAlign: "center", padding: "1em",margin: "1em",color:"white",backgroundColor:"black" }}>
+                        <h3>{pirate.name}</h3>
+                        <p>Crew: {pirate.crew}</p>
+                        <p>Bounty: ${pirate.bounty.toLocaleString()}</p>
+                        <p>Devil Fruit: {pirate.devilFruitType}</p>
+                    </div>
+                ))
+            ) : (
+                <p>No pirates available</p>
+            )}
+            <p>Welcome</p>
+            <img src="https://wallpapers.com/images/featured/super-cool-pictures-h943jt67w6kqn4e6.jpg" alt="Cool Wallpaper" />
+        </>
+    );
 }
 
-export default index
+export default Index;

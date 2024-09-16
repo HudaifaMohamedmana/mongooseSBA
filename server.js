@@ -18,7 +18,8 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 app.get('/',(req, res) => {
-    res.render('Index');
+    let data = ["hudaifa","bryan","shaq"]
+    res.render('Index',{ data });
 });
 
 app.use('/Pirates',PiratesRoutes)

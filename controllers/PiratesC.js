@@ -5,7 +5,7 @@ connectToDb();
 // +++++++++++++ {READ} ++++++++++++++
 const getCharecters = async (req, res) => {
     const pirates = await Pirates.find()
-    res.json({pirates})
+    res.render('Index',{ pirates });
 };
 const getCharectersById = async (req, res) => {
     const characterId = req.params.id
