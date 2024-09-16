@@ -8,6 +8,9 @@ const ShichibukaiRoutes = require('./routes/shichibukaiR');
 
 const port = process.env.PORT || 3000;
 //----------------------------imports --------------------------
+app.set('view engine', 'jsx');
+app.engine('jsx', require('express-react-views').createEngine());
+
 app.use((req, res, next) => {
     console.log(`A request happened: ${req.method} ${req.url}`);
     next();
@@ -15,7 +18,7 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 app.get('/',(req, res) => {
-    res.send(" hello: world");
+    res.render('Index');
 });
 
 app.use('/Pirates',PiratesRoutes)
